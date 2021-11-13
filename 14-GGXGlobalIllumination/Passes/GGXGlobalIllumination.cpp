@@ -97,7 +97,7 @@ void GGXGlobalIlluminationPass::execute(RenderContext* pRenderContext)
 	globalVars["GlobalCB"]["gFrameCount"]   = mFrameCount++;
 	globalVars["GlobalCB"]["gDoIndirectGI"] = mDoIndirectGI;
 	globalVars["GlobalCB"]["gDoDirectGI"]   = mDoDirectGI;
-	globalVars["GlobalCB"]["gMaxDepth"]     = mUserSpecifiedRayDepth;
+	globalVars["GlobalCB"]["gMaxDepth"]     = (uint32_t)mUserSpecifiedRayDepth;
     globalVars["GlobalCB"]["gEmitMult"]     = 1.0f;
 	globalVars["gPos"]         = mpResManager->getTexture("WorldPosition");
 	globalVars["gNorm"]        = mpResManager->getTexture("WorldNormal");
